@@ -1,14 +1,22 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { sendFilterType } from '../redux/actions';
+import { useHistory } from 'react-router-dom';
 
 const DoneRecipesFilter = () => {
+  const history = useHistory();
   const dispatch = useDispatch();
   const handleClick = ({ target: { value } }) => {
     dispatch(sendFilterType(value));
   };
   return (
     <div>
+      <button
+        type="button"
+        onClick={ () => history.push('/foods') }
+      >
+        Home
+      </button>
       <button
         data-testid="filter-by-all-btn"
         type="button"

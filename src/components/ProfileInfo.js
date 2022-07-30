@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocalStorage } from 'react-use';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const ProfileInfo = () => {
   const [emailLS, , removeEmailLS] = useLocalStorage('user');
@@ -9,7 +10,8 @@ const ProfileInfo = () => {
   const [, , removeDoneRecipes] = useLocalStorage('doneRecipes');
   const [, , removefavoriteRecipes] = useLocalStorage('favoriteRecipes');
   const [, , removeinProgressRecipes] = useLocalStorage('inProgressRecipes');
-
+  const history = useHistory();
+  
   const handleClick = () => {
     removeEmailLS();
     removeMealTokenToLS();
@@ -26,7 +28,18 @@ const ProfileInfo = () => {
       >
         { emailLS?.email }
       </h2>
-
+      
+      <br />
+      
+      <button
+        type="button"
+        onClick={ () => history.push('/foods') }
+      >
+        Home
+      </button>
+      
+      <br />
+      
       <Link to="/done-recipes">
         <button
           type="button"

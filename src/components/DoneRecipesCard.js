@@ -7,7 +7,7 @@ import shareIcon from '../images/shareIcon.svg';
 // faltando tag
 const DoneRecipesCard = () => {
   const filterType = useSelector((state) => state.reducer.filterType);
-  const [favoriteRecipes,
+  const [doneRecipes,
   ] = useLocalStorage('doneRecipes', []);
 
   const [clicked, setClick] = useState(false);
@@ -22,7 +22,7 @@ const DoneRecipesCard = () => {
 
   return (
     <div>
-      { favoriteRecipes
+      { doneRecipes
         .filter((doneRecipe) => doneRecipe.type.includes(filterType))
         .map((recipe, index) => (
           <div key={ recipe.id }>

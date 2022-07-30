@@ -27,6 +27,12 @@ const DrinkDetails = () => {
 
   return (
     <div>
+      <button
+        type="button"
+        onClick={ () => history.push('/foods') }
+      >
+        Home
+      </button>
       <h1>DrinkDetails</h1>
       { drinkDetails.length && <Cover isDrink /> }
       <Instructions isDrink />

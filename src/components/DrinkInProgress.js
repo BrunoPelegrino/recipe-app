@@ -25,6 +25,12 @@ const DrinkInProgress = () => {
   }, []);
   return (
     <div>
+      <button
+        type="button"
+        onClick={ () => history.push('/drinks') }
+      >
+        Home
+      </button>
       <Cover isDrink />
       <Ingredients
         ingredientsArray={ ingredients }

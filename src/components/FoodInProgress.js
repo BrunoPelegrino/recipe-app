@@ -24,6 +24,12 @@ const FoodInProgress = () => {
   }, []);
   return (
     <div>
+      <button
+        type="button"
+        onClick={ () => history.push('/foods') }
+      >
+        Home
+      </button>
       <Cover isDrink={ false } />
       <Ingredients
         ingredientsArray={ ingredients }
