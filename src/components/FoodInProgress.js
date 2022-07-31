@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { getMealDetailsToState } from '../redux/actions';
 import Cover from './Cover';
+import home from '../images/home.svg'; 
 import FinishButton from './FinishButton';
 import Ingredients from './Ingredients';
 import Instructions from './Instructions';
@@ -26,9 +27,13 @@ const FoodInProgress = () => {
     <div>
       <button
         type="button"
-        onClick={ () => history.push('/foods') }
+        onClick={ () => history.push('/drinks') }
       >
-        Home
+        <img 
+        src={ home }
+        alt="home button"
+        width="30px"
+        />
       </button>
       <Cover isDrink={ false } />
       <Ingredients

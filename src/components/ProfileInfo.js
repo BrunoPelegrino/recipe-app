@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocalStorage } from 'react-use';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
+import home from '../images/home.svg'; 
 
 const ProfileInfo = () => {
   const [emailLS, , removeEmailLS] = useLocalStorage('user');
@@ -35,7 +36,11 @@ const ProfileInfo = () => {
         type="button"
         onClick={ () => history.push('/foods') }
       >
-        Home
+        <img 
+        src={ home }
+        alt="home button"
+        width="30px"
+        />
       </button>
       
       <br />

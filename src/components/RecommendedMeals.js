@@ -14,35 +14,36 @@ const RecommendedMeals = () => {
   }, []);
 
   return (
-    <li>
+    <li class="carousel w-full">
       {[...meals].splice(0, MAX_REC_CARD).map((rec, i) => (
         <Link
           key={ i }
           to={ `/foods/${rec.idMeal}` }
-          style={ { visibility: `${i < 2 ? 'visible' : 'hidden'}` } }
+          // style={ { visibility: `${i < 2 ? 'visible' : 'hidden'}` } }
         >
-          <div className="recipe-card-recommended">
-            <label htmlFor={ `slide${i}` }>
-              <input
-                type="radio"
-                id={ `slide${i}` }
-                name="slide"
-                checked
-              />
-            </label>
-            <img
+          <div className="
+            flex
+            card
+            w-full
+            h-full
+            shadow-xl
+            ">
+            <figure className="carousel-item w-full">
+              <img
               data-testid={ `${i}-recomendation-card` }
               src={ rec.strMealThumb }
               alt={ rec.strMeal }
               className="recipe-item-recommended"
             />
-
+            </figure>
+            <div className='card-body'>
             <p
               data-testid={ `${i}-recomendation-title` }
             >
               {rec.strMeal}
 
             </p>
+            </div>
           </div>
         </Link>))}
     </li>
