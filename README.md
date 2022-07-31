@@ -1,8 +1,5 @@
-project recipe-app. CSS in progress...
 
-##
-
-# Recipes App Project
+# Recipes App Project(CSS in progress ... ⏳)
 <div align="center">
 <img src="https://github.com/BrunoPelegrino/recipe-app/blob/master/src/images/Captura%20de%20tela%20de%202022-07-31%2020-05-44.png" alt="login screen image">
 </div>
