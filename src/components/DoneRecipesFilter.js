@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { sendFilterType } from '../redux/actions';
 import { useHistory } from 'react-router-dom';
+import home from '../images/home.svg'; 
 
 const DoneRecipesFilter = () => {
   const history = useHistory();
@@ -13,9 +14,13 @@ const DoneRecipesFilter = () => {
     <div>
       <button
         type="button"
-        onClick={ () => history.push('/foods') }
+        onClick={ () => history.push('/drinks') }
       >
-        Home
+        <img 
+        src={ home }
+        alt="home button"
+        width="30px"
+        />
       </button>
       <button
         data-testid="filter-by-all-btn"

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { getDrinkDetailsToState } from '../redux/actions';
 import Cover from './Cover';
+import home from '../images/home.svg'; 
 import StartButton from './StartButton';
 import Recommended from './Recommended';
 import Ingredients from './Ingredients';
@@ -29,14 +30,17 @@ const DrinkDetails = () => {
     <div>
       <button
         type="button"
-        onClick={ () => history.push('/foods') }
+        onClick={ () => history.push('/drinks') }
       >
-        Home
+        <img 
+        src={ home }
+        alt="home button"
+        width="30px"
+        />
       </button>
       <h1>DrinkDetails</h1>
       { drinkDetails.length && <Cover isDrink /> }
       <Instructions isDrink />
-      <h1>Olá do DnrinkDetails</h1>
       <StartButton id={ idDrink } />
       <Ingredients
         ingredientsArray={ ingredients }

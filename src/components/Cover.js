@@ -64,19 +64,27 @@ const Cover = ({ isDrink }) => {
   console.log(favoriteRecipes);
 
   const getDrinkDetails = () => (
-    <div>
+    <div className="w-screen flex flex-col justify-center items-center">
       <img
         src={ drinkDetails.length > 0 ? drinkDetails[0].strDrinkThumb : undefined }
         alt="imageRecipe"
         data-testid="recipe-photo"
         width="300"
         height="250"
+        className="
+        h-full"
       />
-
+      <hr className='w-full h-0.4 bg-yellow-300' />
+      <div className='flex justify-between w-full px-8 items-baseline'>
+      <div>
       <h2 data-testid="recipe-title">
         { drinkDetails.length > 0 && drinkDetails[0].strDrink }
       </h2>
-
+      <p data-testid="recipe-category">
+        { drinkDetails.length > 0 && drinkDetails[0].strAlcoholic}
+      </p>
+      </div>
+      <div className='flex gap-3 mb-3'>
       <button
         type="button"
         onClick={ copyToClipboard }
@@ -103,28 +111,34 @@ const Cover = ({ isDrink }) => {
           data-testid="favorite-btn"
           alt="blackHeartIcon"
         />
-      </button>
-
-      <p data-testid="recipe-category">
-        { drinkDetails.length > 0 && drinkDetails[0].strAlcoholic}
-      </p>
+        </button>
+      </div>
     </div>
+  </div>
   );
 
   const getMealDetails = () => (
-    <div>
+    <div className="w-screen flex flex-col justify-center items-center">
       <img
         src={ mealDetails.length > 0 ? mealDetails[0].strMealThumb : undefined }
         alt="imageRecipe"
         data-testid="recipe-photo"
         width="300"
         height="250"
+        className="
+        h-full"
       />
-
+      <hr className='w-full h-0.4 bg-yellow-300' />
+      <div className='flex justify-between w-full px-8 items-baseline'>
+      <div>
       <h2 data-testid="recipe-title">
         { mealDetails.length > 0 && mealDetails[0].strMeal }
       </h2>
-
+      <p data-testid="recipe-category">
+        { mealDetails.length > 0 && mealDetails[0].strCategory }
+      </p>
+      </div>
+      <div className='flex gap-3 mb-3'>
       <button
         type="button"
         onClick={ copyToClipboard }
@@ -151,12 +165,10 @@ const Cover = ({ isDrink }) => {
           alt="blackHeartIcon"
           data-testid="favorite-btn"
         />
-      </button>
-
-      <p data-testid="recipe-category">
-        { mealDetails.length > 0 && mealDetails[0].strCategory }
-      </p>
+        </button>
+      </div>
     </div>
+  </div>
   );
   return (
     <div>

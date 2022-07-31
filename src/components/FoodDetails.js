@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { getMealDetailsToState } from '../redux/actions';
 import Cover from './Cover';
+import home from '../images/home.svg'; 
 import StartButton from './StartButton';
 import Recommended from './Recommended';
 import Ingredients from './Ingredients';
@@ -29,9 +30,13 @@ const FoodDetails = () => {
     <div>
       <button
         type="button"
-        onClick={ () => history.push('/foods') }
+        onClick={ () => history.push('/drinks') }
       >
-        Home
+        <img 
+        src={ home }
+        alt="home button"
+        width="30px"
+        />
       </button>
       { mealDetails.length && <Cover isDrink={ false } /> }
       <Instructions isDrink={ false } />
@@ -40,11 +45,13 @@ const FoodDetails = () => {
         measuresArray={ measures }
         recipeId={ mealDetails[0]?.idMeal }
       />
+      <div className='flex justify-center items-center'>
       <Video
         videoId={ mealDetails[0] !== undefined
           ? mealDetails[0].strYoutube.split('v=')[1]
           : '' }
       />
+      </div>
       <StartButton id={ idMeal } />
       <Recommended
         isDrink={ false }
