@@ -54,7 +54,7 @@ Agradecimento especial aos meus colegas de grupo 🤝😁
       <a href="https://github.com/DenerRod">
         <img src="https://avatars.githubusercontent.com/u/99992178?v=4" width="100px;" alt="Foto do Dener Rod"/><br>
         <sub>
-          <b>Dener/b>
+          <b>Dener</b>
         </sub>
       </a>
     </td>
