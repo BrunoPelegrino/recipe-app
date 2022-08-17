@@ -34,7 +34,7 @@ npm start
 
 Uma vez com a aplicação iniciada em seu navegador, basta digitar email e senha (não precisam ser dados reais) para validar o login e quem sabe cozinhar alguma coisa!
 
-## 📫 Contribuindo para o RecipeApp!
+## 📫 Contribuindo para o Recipes App!
 
 1. Clone este repositório.
 2. Crie uma branch: `git checkout -b nome-da-branch`.
